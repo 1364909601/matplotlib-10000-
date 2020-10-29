@@ -69,11 +69,10 @@ plt.title("A Sine Curve")
 plt.xlabel("x")
 plt.ylabel("sin(x)");
 
-
+# 或者集成写法 
 plt.plot(x, np.sin(x), '-g', label='sin(x)')
 plt.plot(x, np.cos(x), ':b', label='cos(x)')
 plt.axis('equal')
-
 plt.legend();
 
 
@@ -95,8 +94,3 @@ ax.plot(x, np.sin(x))
 ax.set(xlim=(0, 10), ylim=(-2, 2),
        xlabel='x', ylabel='sin(x)',
        title='A Simple Plot');
-       
-
-
-
-
