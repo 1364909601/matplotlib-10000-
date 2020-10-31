@@ -1,1 +1,37 @@
+%matplotlib inline
+import matplotlib.pyplot as plt
+plt.style.use('seaborn-whitegrid')
+import numpy as np
+
+x = np.linespace(0, 10, 30)
+y = np.sin(x)
+plt.plot(x, y, 'o', color='black');
+
+rng = np.random.RandomState(0)
+for marker in ['o', '.', ',', 'x', '+', 'v', '^', '<', '>', 's', 'd']:
+    plt.plot(rng.rand(5), rng.rand(5), marker,
+             label="marker='{0}'".format(marker))
+plt.legend(numpoints=1)
+plt.xlim(0, 1.8);
+
+plt.plot(x, y, '-ok');
+
+plt.plot(x, y, '-p', color='grey',
+         markersize=15, linewidth=4,
+         markerfacecolor='white', 
+         markerdgecolor='grey',
+         markerdgewidth=2)
+plt.ylim(-1.2, 1.2);
+
+plt.scatter(x, y, marker='o');
+
+rng = np.random.RandomState(0)
+x = rng.randn(100)
+y = rng.randn(100)
+colors = rng.rand(100)
+sizes = 1000 * rng.rand(100)
+
+plt.scatter(x, y, c=colors, s=sizes, alpha=0.3,
+            cmap='viridis')
+plt.colorbar();
 
