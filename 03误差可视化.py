@@ -2,12 +2,13 @@
 
 %matplotlib inline
 import matplotlib.pyplot as plt
-plt.styple.use('seaborn-whitegrid')
+plt.style.use('seaborn-whitegrid')
 import numpy as np
 
+# 基础误差条
 x = np.linspace(0, 10, 50)
 dy = 0.8
-y = np.sin(X) + dy * np.random.randn(50)
+y = np.sin(x) + dy * np.random.randn(50)
 # fmt参数控制线条和点风格的代码，与plt.plot有相同的语法
 plt.errorbar(x, y, yerr=dy, fmt='.k');
 
@@ -15,7 +16,7 @@ plt.errorbar(x, y, yerr=dy, fmt='.k');
 # 使用这些参数你可以很容易的个性化调整误差条的样式
 # 通常将误差线条颜色调整为浅色会更加清晰
 plt.errorbar(x, y, yerr=dy, fmt='o', color='black',
-             ecolor='lightgry', elinewidth=3, capsize=0);
+             ecolor='lightgray', elinewidth=3, capsize=0);
 
 # 除了上面介绍的参数，你还可以指定水平方向的误差条（xerr），单边误差条和其他很多的参数
 # 参阅plt.errorbar的帮助文档获得更多信息
