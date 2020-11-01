@@ -54,7 +54,7 @@ plt.hexbin有许多有趣的参数，
 from scipy.stats import gaussian_kde
 # 产生和处理数据，初始化KDE
 data = np.vstack([x, y])
-kde = guassian_kde(data)
+kde = gaussian_kde(data)
 
 # 在通用的网格中计算得到z的值
 xgrid = np.linspace(-3.5, 3.5, 40)
