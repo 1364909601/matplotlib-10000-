@@ -59,7 +59,7 @@ kde = gaussian_kde(data)
 # 在通用的网格中计算得到z的值
 xgrid = np.linspace(-3.5, 3.5, 40)
 ygrid = np.linspace(-6, 6, 40)
-Xgrid, Ygrid = np.meshgrid(xgrid, ygrid_
+Xgrid, Ygrid = np.meshgrid(xgrid, ygrid)
 Z = kde.evaluate(np.vstack([Xgrid.ravel(), Ygrid.ravel()]))
 
 # 将图表绘制成一张图像
