@@ -17,7 +17,7 @@ def f(x, y):
     y参数代表三维网格的平面纵轴坐标
     而z参数代表三维网格的高度坐标
     np.meshgrid函数，可以将两个一维的数组构造成一个二维的网格
-""""
+"""
 
 x = np.linspace(0, 5, 50)
 y = np.linspace(0, 5, 40)
@@ -53,6 +53,6 @@ plt.imshow()会自动根据输入数据调整坐标轴的比例；
 contours = plt.contour(X, Y, Z, 3, colors='black')
 plt.clabel(contours, inline=True, fontsize=8)
 # 通过设置alpha设置参数透明度
-plt.imshow(Z, extent=[0, 5, 0, 5], origin='lower', camp='RdGy', alpha=0.5)
+plt.imshow(Z, extent=[0, 5, 0, 5], origin='lower', cmap='RdGy', alpha=0.5)
 plt.colorbar();
 
